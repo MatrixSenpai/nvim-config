@@ -8,7 +8,7 @@ vim.opt.relativenumber = true
 -- sane tab defaults
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
-vim.shiftwidth = 4
+vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
 -- be smart about indents
