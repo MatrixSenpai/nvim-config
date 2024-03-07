@@ -3,5 +3,14 @@ return {
     dependencies = {
         'neovim/nvim-lspconfig'
     },
-    build = 'make install'
+    build = 'make install',
+    config = function()
+        require('xbase').setup({
+            simctl = {
+                iOS = {
+                    "iPhone 15 Pro"
+                }
+            }
+        })
+    end
 }

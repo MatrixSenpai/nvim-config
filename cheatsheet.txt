@@ -1,0 +1,57 @@
+## Custom remaps @personal @custom
+Leader | ,
+File Explorere | <leader>pv
+
+Tab Edit | <leader>t
+Tab Next | <leader>x
+Tab Previous | <leader>z
+
+## Primeagen Keymaps @prime
+Displace Line Up | J
+Displace Line Down | K
+Paste Over (don't yank underneath) | <leader>p
+
+## Harpoon Keymaps @harpoon
+Open Harpoon | <header>hl
+Add to Harpoon | <leader>ha
+Next in Harpoon list | <leader>hx
+Previous in Harpoon list | <leader>hz
+
+## Autocomplete Keymaps @completion
+Open autocomplete menu | <C-Space>
+Confirm selection | <CR>
+Scroll up in completion list | <C-u>
+Scroll down in completion list | <C-d>
+Next snippet | <C-f>
+Previous snippet | <C-b>
+Show usages | <leader>lr
+
+## LSP Keymaps @lookup
+Toggle diagnostics window | <Space>e
+Set diagnostic loc list | <Space>q
+Go to next diagnostic | [d
+Go to previous diagnostic | ]d
+Go to declaration | gD
+Go to definition | gd
+Go to implementation | gi
+Go to type definition | <Space>D
+Rename item | <Space>rn
+Show code actions | <Space>ca
+Show references | gr
+Show hover | K
+Show signature | <C-k>
+
+## Prettier @prettier
+Format current buffer | <leader>f
+
+## Telescope File Finder @files @search
+Find any file | <leader>ff
+Find files in version control | <C-f>
+Find string in files | <leader>fs
+
+## Telescope NX console @nx
+Open NX actions | <leader>nx
+
+## Undotree actions @undo
+Open Undotree panel | <leader>,
+
