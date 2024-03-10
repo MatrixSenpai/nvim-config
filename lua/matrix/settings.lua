@@ -5,6 +5,10 @@ vim.opt.guicursor = ""
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
+-- disable netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 -- sane tab defaults
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
