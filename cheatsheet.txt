@@ -1,6 +1,7 @@
 ## Custom remaps @personal @custom
 Leader | ,
-File Explorere | <leader>pv
+File Explorer | <leader>pv
+File Explorer Split Left | <leader>pl
 
 Tab Edit | <leader>t
 Tab Next | <leader>x
