@@ -53,5 +53,20 @@ Find string in files | <leader>fs
 Open NX actions | <leader>nx
 
 ## Undotree actions @undo
-Open Undotree panel | <leader>,
+Open Undotree panel | <leader>u
 
+## Rust actions @rust
+Hover actions for code item | <C-Space>
+Runnable actions for hovered item | <leader>ra
+
+## Tmux navigation @tmux
+Left Pane | <Alt-h>
+Down Pane | <Alt-j>
+Up Pane | <Alt-k>
+Down Pane | <Alt-l>
+
+## Pane navigation @pane
+Left vim pane | <C-h>
+Down vim pane | <C-j>
+Up vim pane | <C-k>
+Right vim pane | <C-l>
