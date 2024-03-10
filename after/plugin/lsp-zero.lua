@@ -1,5 +1,6 @@
 local cmp = require('cmp')
 local lsp_zero = require('lsp-zero')
+local rt = require('rust-tools')
 
 lsp_zero.on_attach(function(client, bufnr)
 	lsp_zero.default_keymaps({ buffer = bufnr })
@@ -76,4 +77,13 @@ require('mason-lspconfig').setup({
 	handlers = {
 		lsp_zero.default_setup
 	}
+})
+
+rt.setup({
+    server = {
+        on_attach = function(_, bufnr)
+            vim.keymap.set('n', '<C-Space>', rt.hover_actions.hover_actions, { buffer = bufnr })
+            vim.keymap.set('n', '<leader>ra', rt.code_action_group.code_action_group, { buffer = bufnr })
+        end,
+    },
 })
