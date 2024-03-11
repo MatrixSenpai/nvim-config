@@ -1,8 +1,7 @@
 local cmp = require('cmp')
 local lsp_zero = require('lsp-zero')
-local rt = require('rust-tools')
 
-lsp_zero.on_attach(function(client, bufnr)
+lsp_zero.on_attach(function(_, bufnr)
 	lsp_zero.default_keymaps({ buffer = bufnr })
     vim.keymap.set('n', '<leader>lr', '<cmd>Telescope lsp_references<cr>', { buffer = bufnr })
 end)
@@ -71,19 +70,25 @@ require('mason-lspconfig').setup({
 		'tsserver',
 		'eslint',
 		'lua_ls',
-		'rust_analyzer',
 		'taplo',
 	},
 	handlers = {
-		lsp_zero.default_setup
+		lsp_zero.default_setup,
+        rust_analyzer = lsp_zero.noop,
 	}
 })
 
-rt.setup({
+vim.g.rustaceanvim = {
     server = {
+        capabilities = lsp_zero.get_capabilities(),
         on_attach = function(_, bufnr)
-            vim.keymap.set('n', '<C-Space>', rt.hover_actions.hover_actions, { buffer = bufnr })
-            vim.keymap.set('n', '<leader>ra', rt.code_action_group.code_action_group, { buffer = bufnr })
+            vim.keymap.set('n', '<leader>ra', function() vim.cmd.RustLsp('codeAction') end, { silent = true, buffer = bufnr })
+            vim.keymap.set('n', '<leader>rc', function() vim.cmd.RustLsp('openCargo') end, { silent = true, buffer = bufnr })
+
+            vim.keymap.set('n', '<C-Space>', function() vim.cmd.RustLsp { 'hover', 'actions' } end, { silent = true, buffer = bufnr })
+            vim.keymap.set('n', '<C-d>', function () vim.cmd.RustLsp('debuggables') end, { silent = true, buffer = bufnr })
+            vim.keymap.set('n', '<C-r>', function() vim.cmd.RustLsp('runnables') end, { silent = true, buffer = bufnr })
+            vim.keymap.set('n', '<C-t>', function() vim.cmd.RustLsp('testables') end, { silent = true, buffer = bufnr })
         end,
     },
-})
+}
