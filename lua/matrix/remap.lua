@@ -12,6 +12,9 @@ vim.keymap.set('n', '<leader>z', vim.cmd.tabprev)
 vim.keymap.set('n', '<leader>x', vim.cmd.tabnext)
 vim.keymap.set('n', '<leader>t', ':tabedit ')
 
+-- find and replace inside block
+vim.keymap.set('n', '<leader>fb', ':\'<,\'>s/')
+
 -- buffer shortcuts
 vim.keymap.set('n', '<leader>q', vim.cmd.wq)
 

@@ -28,6 +28,8 @@ Previous snippet | <C-b>
 Show usages | <leader>lr
 
 ## LSP Keymaps @lookup
+Previous definition jump | <C-i>
+Next definition jump | <C-o>
 Toggle diagnostics window | <Space>e
 Set diagnostic loc list | <Space>q
 Go to next diagnostic | [d
