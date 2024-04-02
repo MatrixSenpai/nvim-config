@@ -14,6 +14,10 @@ vim.keymap.set('n', '<leader>t', ':tabedit ')
 
 -- find and replace inside block
 vim.keymap.set('n', '<leader>fb', ':\'<,\'>s/')
+-- find marked todos
+vim.keymap.set('n', '<leader>ft', function()
+  require('telescope.builtin').grep_string({ search = '(mason)' })
+end)
 
 -- buffer shortcuts
 vim.keymap.set('n', '<leader>q', vim.cmd.wq)
