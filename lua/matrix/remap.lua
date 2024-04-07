@@ -8,9 +8,9 @@ vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 vim.keymap.set('x', '<leader>p', '"_dP')
 
 -- tab editing
-vim.keymap.set('n', '<leader>z', vim.cmd.tabprev)
-vim.keymap.set('n', '<leader>x', vim.cmd.tabnext)
-vim.keymap.set('n', '<leader>t', ':tabedit ')
+-- vim.keymap.set('n', '<leader>z', vim.cmd.tabprev)
+-- vim.keymap.set('n', '<leader>x', vim.cmd.tabnext)
+-- vim.keymap.set('n', '<leader>t', ':tabedit ')
 
 -- find and replace inside block
 vim.keymap.set('n', '<leader>fb', ':\'<,\'>s/')
